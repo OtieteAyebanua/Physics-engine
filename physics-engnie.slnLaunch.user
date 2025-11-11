@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "testingPE\\PhysicsEngine.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "FlatPhysics\\FlatPhysics.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ayeba\\Desktop\\work\\testingPE\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4CDD10FB-AE52-43C0-ADE2-2D743179D02B}|testingPE\\PhysicsEngine.csproj|c:\\users\\ayeba\\desktop\\work\\testingpe\\testingpe\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CDD10FB-AE52-43C0-ADE2-2D743179D02B}|testingPE\\PhysicsEngine.csproj|solutionrelative:testingpe\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CDD10FB-AE52-43C0-ADE2-2D743179D02B}|testingPE\\PhysicsEngine.csproj|c:\\users\\ayeba\\desktop\\work\\testingpe\\testingpe\\physics\\physicsworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CDD10FB-AE52-43C0-ADE2-2D743179D02B}|testingPE\\PhysicsEngine.csproj|solutionrelative:testingpe\\physics\\physicsworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CDD10FB-AE52-43C0-ADE2-2D743179D02B}|testingPE\\PhysicsEngine.csproj|c:\\users\\ayeba\\desktop\\work\\testingpe\\testingpe\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4CDD10FB-AE52-43C0-ADE2-2D743179D02B}|testingPE\\PhysicsEngine.csproj|solutionrelative:testingpe\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PhysicsWorld.cs",
+              "DocumentMoniker": "C:\\Users\\ayeba\\Desktop\\work\\testingPE\\testingPE\\Physics\\PhysicsWorld.cs",
+              "RelativeDocumentMoniker": "testingPE\\Physics\\PhysicsWorld.cs",
+              "ToolTip": "C:\\Users\\ayeba\\Desktop\\work\\testingPE\\testingPE\\Physics\\PhysicsWorld.cs",
+              "RelativeToolTip": "testingPE\\Physics\\PhysicsWorld.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBIAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T15:02:16.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Game.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ayeba\\Desktop\\work\\testingPE\\testingPE\\Game.cs",
+              "RelativeDocumentMoniker": "testingPE\\Game.cs",
+              "ToolTip": "C:\\Users\\ayeba\\Desktop\\work\\testingPE\\testingPE\\Game.cs [Design]",
+              "RelativeToolTip": "testingPE\\Game.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T14:59:49.039Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\ayeba\\Desktop\\work\\testingPE\\testingPE\\Game.cs",
+              "RelativeDocumentMoniker": "testingPE\\Game.cs",
+              "ToolTip": "C:\\Users\\ayeba\\Desktop\\work\\testingPE\\testingPE\\Game.cs",
+              "RelativeToolTip": "testingPE\\Game.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T00:59:45.439Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

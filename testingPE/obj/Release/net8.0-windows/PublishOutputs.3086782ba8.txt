@@ -1,0 +1,5 @@
+C:\Users\ayeba\Desktop\work\TestMyPhysicsengine\testingPE.exe
+C:\Users\ayeba\Desktop\work\TestMyPhysicsengine\testingPE.dll
+C:\Users\ayeba\Desktop\work\TestMyPhysicsengine\testingPE.deps.json
+C:\Users\ayeba\Desktop\work\TestMyPhysicsengine\testingPE.runtimeconfig.json
+C:\Users\ayeba\Desktop\work\TestMyPhysicsengine\testingPE.pdb

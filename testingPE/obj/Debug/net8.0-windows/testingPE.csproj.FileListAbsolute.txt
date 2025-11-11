@@ -1,0 +1,16 @@
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\obj\Debug\net8.0-windows\testingPE.csproj.GenerateResource.cache
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\obj\Debug\net8.0-windows\testingPE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\obj\Debug\net8.0-windows\testingPE.AssemblyInfoInputs.cache
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\obj\Debug\net8.0-windows\testingPE.AssemblyInfo.cs
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\obj\Debug\net8.0-windows\testingPE.csproj.CoreCompileInputs.cache
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\bin\Debug\net8.0-windows\testingPE.exe
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\bin\Debug\net8.0-windows\testingPE.deps.json
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\bin\Debug\net8.0-windows\testingPE.runtimeconfig.json
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\bin\Debug\net8.0-windows\testingPE.dll
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\bin\Debug\net8.0-windows\testingPE.pdb
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\obj\Debug\net8.0-windows\testingPE.dll
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\obj\Debug\net8.0-windows\refint\testingPE.dll
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\obj\Debug\net8.0-windows\testingPE.pdb
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\obj\Debug\net8.0-windows\testingPE.genruntimeconfig.cache
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\obj\Debug\net8.0-windows\ref\testingPE.dll
+C:\Users\ayeba\Desktop\work\testingPE\testingPE\obj\Debug\net8.0-windows\testingPE.Game.resources
