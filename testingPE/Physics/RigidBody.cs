@@ -18,6 +18,7 @@ namespace PhysicsEngine.Physics
         public float InverseMass => (Mass <= 0f || float.IsInfinity(Mass)) ? 0f : 1f / Mass;
         public float Restitution { get; set; } = 0.1f;
         public float LinearDamping { get; set; } = 0.0f;
+        public List<int> DisplacementFromOtherObjects { get; set; } = new List<int>();
 
         private Vector2 _accumulateedForces;
 

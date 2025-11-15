@@ -30,3 +30,4 @@ C:\Users\ayeba\Desktop\work\physics-engine\testingPE\obj\Debug\net8.0-windows\re
 C:\Users\ayeba\Desktop\work\physics-engine\testingPE\obj\Debug\net8.0-windows\PhysicsEngine.pdb
 C:\Users\ayeba\Desktop\work\physics-engine\testingPE\obj\Debug\net8.0-windows\PhysicsEngine.genruntimeconfig.cache
 C:\Users\ayeba\Desktop\work\physics-engine\testingPE\obj\Debug\net8.0-windows\ref\PhysicsEngine.dll
+C:\Users\ayeba\Desktop\work\physics-engine\testingPE\obj\Debug\net8.0-windows\PhysicsEngine.sourcelink.json

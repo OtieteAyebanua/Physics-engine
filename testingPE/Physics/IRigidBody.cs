@@ -9,6 +9,7 @@ namespace PhysicsEngine.Physics
 {
     public interface IRigidBody
     {
+        float RenderRadius { get; set; }
         Vector2 Position { get; set; }
         Vector2 Velocity { get; set; }
         float Mass { get; }
@@ -20,5 +21,6 @@ namespace PhysicsEngine.Physics
         void AddForce(Vector2 f);
         void ClearForces();
         void Integrate(float dt);
+        List<int> DisplacementFromOtherObjects { get; set; }
     }
 }

@@ -19,6 +19,7 @@ namespace PhysicsEngine
 
         private SceneObject _ballA,
             _ballB,
+            _ballC,
             _floor;
 
         public Game()
@@ -27,26 +28,31 @@ namespace PhysicsEngine
             DoubleBuffered = true;
             ClientSize = new Size(900, 800);
 
-            _world.AddGlobalForce(new Gravity(new Vector2(0, +980f)));
+            _world.AddGlobalForce(new Gravity(new Vector2(0f, 0f)));
             _world.AddGlobalForce(new LinearDrag(2.0f));
 
             _ballA = new SceneObject(
                 "Ball A",
-                new RigidBody(new Vector2(400, 200), mass: 0.2f) { Width = 0.5f, Height = 0.5f }
+                new RigidBody(new Vector2(400, 50), mass: 0.1f) { Width = 0.5f, Height = 0.5f }
             );
             _ballB = new SceneObject(
                 "Ball B",
-                new RigidBody(new Vector2(400, 100), mass: 0.27f) { Width = 0.5f, Height = 0.5f }
+                new RigidBody(new Vector2(400, 100), mass: 0.1f) { Width = 0.5f, Height = 0.5f }
+            );
+            _ballC = new SceneObject(
+                "Ball B",
+                new RigidBody(new Vector2(400, 150), mass: 0.1f) { Width = 0.5f, Height = 0.5f }
             );
 
             _floor = new SceneObject(
                 "Ground",
-                new RigidBody(new Vector2(200, 600), mass: 0f) { Width = 1f, Height = 1f }
+                new RigidBody(new Vector2(200, 200), mass: 0.1f) { Width = 0.5f, Height = 0.5f }
             );
 
             _world.AddBody(_ballA.Body);
             _world.AddBody(_ballB.Body);
             _world.AddBody(_floor.Body);
+            _world.AddBody(_ballC.Body);
 
             UpdateWorldBounds();
             Resize += (_, __) => UpdateWorldBounds();
@@ -54,25 +60,6 @@ namespace PhysicsEngine
             _timer.Tick += (_, __) =>
             {
                 _world.Step(Dt);
-                if ((int)_ballA.Body.Position.Y == (int)_ballB.Body.Position.Y)
-                {
-                    Console.WriteLine(
-                        " This is ball A posY:"
-                            + _ballA.Body.Position.Y
-                            + "This is ball B posY:"
-                            + _ballB.Body.Position.Y
-                    );
-                    Close();
-                }
-                else
-                {
-                    Console.WriteLine(
-                        " ball A posY:"
-                            + _ballA.Body.Position.Y
-                            + "ball B posY:"
-                            + _ballB.Body.Position.Y
-                    );
-                }
                 Invalidate();
             };
             _timer.Start();
@@ -91,7 +78,8 @@ namespace PhysicsEngine
             g.Clear(Color.Black);
             DrawBody(g, _ballA.Body, Brushes.DeepSkyBlue);
             DrawBody(g, _ballB.Body, Brushes.Gold);
-            DrawRectBody(g, _floor.Body, Brushes.Green);
+            DrawBody(g, _ballC.Body, Brushes.Red);
+            // DrawRectBody(g, _floor.Body, Brushes.Green);
             using var f = new Font("Consolas", 10f);
             g.DrawString("Esc to quit", f, Brushes.White, 10, 10);
         }
@@ -122,7 +110,35 @@ namespace PhysicsEngine
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == Keys.Escape)
+            {
                 Close();
+                return true;
+            }
+
+            if (_ballA?.Body is IRigidBody body)
+            {
+                const float moveSpeed = 55f;
+
+                switch (keyData)
+                {
+                    case Keys.Left:
+                        body.Velocity = new Vector2(moveSpeed, body.Velocity.Y);
+                        return true;
+
+                    case Keys.Right:
+                        body.Velocity = new Vector2(-moveSpeed, body.Velocity.Y);
+                        return true;
+
+                    case Keys.Up:
+                        body.Velocity = new Vector2(body.Velocity.X, +moveSpeed);
+                        return true;
+
+                    case Keys.Down:
+                        body.Velocity = new Vector2(body.Velocity.X, -moveSpeed);
+                        return true;
+                }
+            }
+
             return base.ProcessCmdKey(ref msg, keyData);
         }
 

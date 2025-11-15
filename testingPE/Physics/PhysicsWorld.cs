@@ -22,6 +22,8 @@ namespace PhysicsEngine.Physics
 
         public void Step(float dt)
         {
+
+            new Collision().CollisionHandler(Bodies);
             foreach (var body in Bodies)
             foreach (var force in GlobalForces)
                 force.Apply(body, dt);
