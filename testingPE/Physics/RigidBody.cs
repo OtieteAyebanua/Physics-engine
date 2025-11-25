@@ -12,13 +12,21 @@ namespace PhysicsEngine.Physics
         public float RenderRadius { get; set; } = 16f;
         public Vector2 Position { get; set; }
         public Vector2 Velocity { get; set; }
-        public float Mass { get; }
+        public float Mass { get; set; }
         public float Width { get; set; }
         public float Height { get; set; }
-        public float InverseMass => (Mass <= 0f || float.IsInfinity(Mass)) ? 0f : 1f / Mass;
-        public float Restitution { get; set; } = 0.1f;
+        public float InverseMass
+        {
+            get => (Mass <= 0f || float.IsInfinity(Mass)) ? 0f : 1f / Mass;
+            set
+            {
+                Mass =
+                    (value <= 0f || float.IsInfinity(value)) ? float.PositiveInfinity : 1f / value;
+            }
+        }
+        public float Restitution { get; set; } = 1f;
         public float LinearDamping { get; set; } = 0.0f;
-        public List<int> DisplacementFromOtherObjects { get; set; } = new List<int>();
+        public bool allowCollision { get; set; } = true;
 
         private Vector2 _accumulateedForces;
 

@@ -12,15 +12,15 @@ namespace PhysicsEngine.Physics
         float RenderRadius { get; set; }
         Vector2 Position { get; set; }
         Vector2 Velocity { get; set; }
-        float Mass { get; }
+        float Mass { get;set; }
         float Width { get; set; }
         float Height { get; set; }
-        float InverseMass { get; }
+        float InverseMass { get; set;}
         float Restitution { get; set; }
         float LinearDamping { get; set; }
         void AddForce(Vector2 f);
         void ClearForces();
         void Integrate(float dt);
-        List<int> DisplacementFromOtherObjects { get; set; }
+        bool allowCollision { get; set; }
     }
 }

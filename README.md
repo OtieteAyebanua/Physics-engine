@@ -19,3 +19,6 @@ Algorithm for detecting collison
 #Resolve collision....
     #Determin E(restitution) from the less bouncy object;
     
+#Handle collision using aabb..
+#each object should be able to toggle collision on and off
+#collision resolution should be determined by user(tho the three types of collision would be made available);

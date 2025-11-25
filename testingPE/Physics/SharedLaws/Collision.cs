@@ -72,28 +72,26 @@ namespace PhysicsEngine
             Vector2 delta = object2.Position - object1.Position;
             float distSq = delta.LengthSquared();
 
-            if (distSq == 0f)
+            if (distSq < 1e-8f)
             {
                 delta = new Vector2(1f, 0f);
                 distSq = 1f;
             }
 
-            Vector2 normal = Vector2.Normalize(delta);
-            float e = Math.Min(object1.Restitution, object2.Restitution);
-            Vector2 rv = object2.Velocity - object1.Velocity;
-            float velAlongNormal = Vector2.Dot(rv, normal);
-            if (velAlongNormal > 0f)
-                return;
-            float invMass1 = object1.Mass > 0f ? 1f / object1.Mass : 0f;
-            float invMass2 = object2.Mass > 0f ? 1f / object2.Mass : 0f;
-            float invMassSum = invMass1 + invMass2;
+            float dist = MathF.Sqrt(distSq);
+            Vector2 normal = delta / dist;
 
+            float radiusSum = object1.RenderRadius + object2.RenderRadius;
+            float penetration = radiusSum - dist;
+            if (penetration <= 0f)
+                return;
+
+            // Use InverseMass consistently with your world
+            float invMass1 = object1.InverseMass;
+            float invMass2 = object2.InverseMass;
+            float invMassSum = invMass1 + invMass2;
             if (invMassSum <= 0f)
                 return;
-            float j = -(1f + e) * velAlongNormal / invMassSum;
-            Vector2 impulse = j * normal;
-            object1.Velocity -= impulse * invMass1;
-            object2.Velocity += impulse * invMass2;
         }
     }
 }

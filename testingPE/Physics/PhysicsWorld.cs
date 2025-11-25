@@ -22,19 +22,35 @@ namespace PhysicsEngine.Physics
 
         public void Step(float dt)
         {
-
-            new Collision().CollisionHandler(Bodies);
+            List<IRigidBody> bodiesAllowingCollision = new List<IRigidBody>();
             foreach (var body in Bodies)
-            foreach (var force in GlobalForces)
-                force.Apply(body, dt);
+            {
+                foreach (var force in GlobalForces)
+                {
+                    force.Apply(body, dt);
+                }
+            }
 
             foreach (var body in Bodies)
+            {
                 body.Integrate(dt);
+            }
+
+            for (int i = 0; i < Bodies.Count; i++)
+            {
+                if (Bodies[i].allowCollision)
+                {
+                    bodiesAllowingCollision.Add(Bodies[i]);
+                }
+            }
+            var collision = new Collision();
+            collision.CollisionHandler(bodiesAllowingCollision);
 
             foreach (var body in Bodies)
             {
                 if (body.InverseMass == 0f)
                     continue;
+
                 var pos = body.Position;
                 var vel = body.Velocity;
 
@@ -52,15 +68,16 @@ namespace PhysicsEngine.Physics
                         vel.Y = -vel.Y * body.Restitution;
                     }
                 }
+
                 if (MaxBounds.HasValue)
                 {
                     var max = MaxBounds.Value;
-                    if (pos.X >= max.X)
+                    if (pos.X > max.X)
                     {
                         pos.X = max.X;
                         vel.X = -vel.X * body.Restitution;
                     }
-                    if (pos.Y >= max.Y)
+                    if (pos.Y > max.Y)
                     {
                         pos.Y = max.Y;
                         vel.Y = -vel.Y * body.Restitution;
