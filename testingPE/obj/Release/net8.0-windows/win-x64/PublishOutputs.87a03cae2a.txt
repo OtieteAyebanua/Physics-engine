@@ -1,5 +1,0 @@
-C:\Users\ayeba\Desktop\work\testingPE.exe
-C:\Users\ayeba\Desktop\work\testingPE.dll
-C:\Users\ayeba\Desktop\work\testingPE.deps.json
-C:\Users\ayeba\Desktop\work\testingPE.runtimeconfig.json
-C:\Users\ayeba\Desktop\work\testingPE.pdb
