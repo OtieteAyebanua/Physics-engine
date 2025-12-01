@@ -31,7 +31,11 @@
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\ayeba\\Desktop\\work\\physics-engine\\FlatPhysics\\FlatPhysics.csproj": {
+                "projectPath": "C:\\Users\\ayeba\\Desktop\\work\\physics-engine\\FlatPhysics\\FlatPhysics.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -68,7 +72,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

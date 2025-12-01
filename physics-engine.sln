@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhysicsEngine", "testingPE\PhysicsEngine.csproj", "{4CDD10FB-AE52-43C0-ADE2-2D743179D02B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "testingPE\Sample.csproj", "{4CDD10FB-AE52-43C0-ADE2-2D743179D02B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlatPhysics", "FlatPhysics\FlatPhysics.csproj", "{9580E675-4E43-4DCE-8B9E-93644CEEB639}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImpactPhysicsEngine", "ImpactPhysicsEngine\ImpactPhysicsEngine.csproj", "{F187CAB0-0D41-4459-8DA4-D1EE61E1276E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9580E675-4E43-4DCE-8B9E-93644CEEB639}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9580E675-4E43-4DCE-8B9E-93644CEEB639}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9580E675-4E43-4DCE-8B9E-93644CEEB639}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F187CAB0-0D41-4459-8DA4-D1EE61E1276E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F187CAB0-0D41-4459-8DA4-D1EE61E1276E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F187CAB0-0D41-4459-8DA4-D1EE61E1276E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F187CAB0-0D41-4459-8DA4-D1EE61E1276E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

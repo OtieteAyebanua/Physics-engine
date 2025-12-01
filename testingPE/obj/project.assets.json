@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ayeba\\Desktop\\work\\physics-engine\\testingPE\\PhysicsEngine.csproj",
-      "projectName": "PhysicsEngine",
-      "projectPath": "C:\\Users\\ayeba\\Desktop\\work\\physics-engine\\testingPE\\PhysicsEngine.csproj",
+      "projectUniqueName": "C:\\Users\\ayeba\\Desktop\\work\\physics-engine\\testingPE\\Sample.csproj",
+      "projectName": "Sample",
+      "projectPath": "C:\\Users\\ayeba\\Desktop\\work\\physics-engine\\testingPE\\Sample.csproj",
       "packagesPath": "C:\\Users\\ayeba\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ayeba\\Desktop\\work\\physics-engine\\testingPE\\obj\\",
       "projectStyle": "PackageReference",
@@ -75,7 +75,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
