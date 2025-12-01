@@ -10,3 +10,15 @@ C:\Users\ayeba\Desktop\work\physics-engine\ImpactPhysicsEngine\obj\Debug\net8.0\
 C:\Users\ayeba\Desktop\work\physics-engine\ImpactPhysicsEngine\obj\Debug\net8.0\refint\ImpactPhysicsEngine.dll
 C:\Users\ayeba\Desktop\work\physics-engine\ImpactPhysicsEngine\obj\Debug\net8.0\ImpactPhysicsEngine.pdb
 C:\Users\ayeba\Desktop\work\physics-engine\ImpactPhysicsEngine\obj\Debug\net8.0\ref\ImpactPhysicsEngine.dll
+C:\Users\ayeba\Desktop\work\ImpactPhysicsEngine\ImpactPhysicsEngine\bin\Debug\net8.0\ImpactPhysicsEngine.deps.json
+C:\Users\ayeba\Desktop\work\ImpactPhysicsEngine\ImpactPhysicsEngine\bin\Debug\net8.0\ImpactPhysicsEngine.dll
+C:\Users\ayeba\Desktop\work\ImpactPhysicsEngine\ImpactPhysicsEngine\bin\Debug\net8.0\ImpactPhysicsEngine.pdb
+C:\Users\ayeba\Desktop\work\ImpactPhysicsEngine\ImpactPhysicsEngine\obj\Debug\net8.0\ImpactPhysicsEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ayeba\Desktop\work\ImpactPhysicsEngine\ImpactPhysicsEngine\obj\Debug\net8.0\ImpactPhysicsEngine.AssemblyInfoInputs.cache
+C:\Users\ayeba\Desktop\work\ImpactPhysicsEngine\ImpactPhysicsEngine\obj\Debug\net8.0\ImpactPhysicsEngine.AssemblyInfo.cs
+C:\Users\ayeba\Desktop\work\ImpactPhysicsEngine\ImpactPhysicsEngine\obj\Debug\net8.0\ImpactPhysicsEngine.csproj.CoreCompileInputs.cache
+C:\Users\ayeba\Desktop\work\ImpactPhysicsEngine\ImpactPhysicsEngine\obj\Debug\net8.0\ImpactPhysicsEngine.sourcelink.json
+C:\Users\ayeba\Desktop\work\ImpactPhysicsEngine\ImpactPhysicsEngine\obj\Debug\net8.0\ImpactPhysicsEngine.dll
+C:\Users\ayeba\Desktop\work\ImpactPhysicsEngine\ImpactPhysicsEngine\obj\Debug\net8.0\refint\ImpactPhysicsEngine.dll
+C:\Users\ayeba\Desktop\work\ImpactPhysicsEngine\ImpactPhysicsEngine\obj\Debug\net8.0\ImpactPhysicsEngine.pdb
+C:\Users\ayeba\Desktop\work\ImpactPhysicsEngine\ImpactPhysicsEngine\obj\Debug\net8.0\ref\ImpactPhysicsEngine.dll

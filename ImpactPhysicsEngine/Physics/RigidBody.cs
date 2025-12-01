@@ -52,7 +52,8 @@ namespace PhysicsEngine.Physics
             Velocity += acceleration * dt;
             Velocity *= MathF.Max(0f, 1f - LinearDamping * dt);
 
-            Position += acceleration * dt;
+            // Integrate position using the updated velocity (semi-implicit Euler)
+            Position += Velocity * dt;
 
             ClearForces();
         }
