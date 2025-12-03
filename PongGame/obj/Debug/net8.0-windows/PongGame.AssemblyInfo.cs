@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PongGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4d3b19012c0af6720e12fa91fcdb2de7424ba3a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f81380e6cd4e9e413502cdd151141f3868f114e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PongGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PongGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

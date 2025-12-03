@@ -133,57 +133,7 @@ namespace PongGame
                 _spawnAccumulator = 0f;
                 SpawnFallingSquare();
             }
-
-            // Check collisions between player and falling objects
-            var toRemove = new List<(SceneObject obj, Color color)>();
-            foreach (var (obj, color) in _objects.ToList())
-            {
-                if (obj == _player) continue;
-                var pos = obj.Body.Position;
-                if (pos.Y - obj.Body.Height / 2f > _worldHeight + 50)
-                {
-                    toRemove.Add((obj, color));
-                    continue;
-                }
-
-                if (AABBOverlap(obj, _player))
-                {
-                    // collision -> lose a life
-                    _lives--;
-                    toRemove.Add((obj, color));
-                    if (_lives <= 0)
-                    {
-                        _gameOver = true;
-                        break;
-                    }
-                }
-            }
-
-            // Remove objects and bodies
-            foreach (var rem in toRemove)
-            {
-                _objects.Remove(rem);
-                _world.Bodies.Remove(rem.obj.Body);
-            }
         }
-
-        private bool AABBOverlap(SceneObject a, SceneObject b)
-        {
-            var aPos = a.Body.Position;
-            var bPos = b.Body.Position;
-            float ax1 = aPos.X - a.Body.Width / 2f;
-            float ay1 = aPos.Y - a.Body.Height / 2f;
-            float ax2 = aPos.X + a.Body.Width / 2f;
-            float ay2 = aPos.Y + a.Body.Height / 2f;
-
-            float bx1 = bPos.X - b.Body.Width / 2f;
-            float by1 = bPos.Y - b.Body.Height / 2f;
-            float bx2 = bPos.X + b.Body.Width / 2f;
-            float by2 = bPos.Y + b.Body.Height / 2f;
-
-            return !(ax2 < bx1 || ax1 > bx2 || ay2 < by1 || ay1 > by2);
-        }
-
         private void SpawnFallingSquare()
         {
             int size = _rnd.Next(24, 56);
