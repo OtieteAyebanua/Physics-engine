@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Numerics;
 
 namespace PhysicsEngine.Physics.SharedLaws
 {
@@ -12,13 +13,15 @@ namespace PhysicsEngine.Physics.SharedLaws
 
         public LinearDrag(float coefficient) => Coefficient = coefficient;
 
-        public void Apply(IRigidBody body, float dt)
+        public void Apply(IRigidBody body)
         {
-            if (body.InverseMass == 0f)
-                return;
-            float area = body.Width * body.Height;
-            float arealCoefficient = -Coefficient * area;
-            body.AddForce(arealCoefficient * body.Velocity);
+            var x = body.Velocity;
+            if (x == body.Velocity)
+            {
+            }
+            Console.WriteLine(x);
+            body.AddForce(-Coefficient * body.Velocity);
         }
+
     }
 }

@@ -27,7 +27,7 @@ namespace PhysicsEngine.Physics
             {
                 foreach (var force in GlobalForces)
                 {
-                    force.Apply(body, dt);
+                    force.Apply(body);
                 }
             }
 

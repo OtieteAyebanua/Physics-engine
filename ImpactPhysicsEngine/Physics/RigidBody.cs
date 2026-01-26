@@ -47,14 +47,13 @@ namespace PhysicsEngine.Physics
                 ClearForces();
                 return;
             }
-
             Vector2 acceleration = _accumulateedForces * InverseMass;
             Velocity += acceleration * dt;
             Velocity *= MathF.Max(0f, 1f - LinearDamping * dt);
-
-            Position += acceleration * dt;
+            Position += Velocity * dt;
 
             ClearForces();
         }
+
     }
 }

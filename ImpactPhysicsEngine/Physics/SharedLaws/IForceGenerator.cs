@@ -8,6 +8,6 @@ namespace PhysicsEngine.Physics.SharedLaws
 {
     public interface IForceGenerator
     {
-        void Apply(IRigidBody body, float dt);
+        void Apply(IRigidBody body);
     }
 }

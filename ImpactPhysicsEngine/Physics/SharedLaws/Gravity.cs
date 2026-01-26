@@ -9,15 +9,18 @@ namespace PhysicsEngine.Physics.SharedLaws
 {
     public class Gravity : IForceGenerator
     {
-        public Vector2 G { get; set; }
+        public float G { get; set; }
 
-        public Gravity(Vector2 g) => G = g;
+        public Gravity(float g) => G = g;
 
-        public void Apply(IRigidBody body, float dt)
+        public void Apply(IRigidBody body)
         {
-            if (body.InverseMass == 0f)
-                return;
-            body.AddForce(G * body.Mass);
+            var x = body.Velocity;
+            if(x == body.Velocity)
+            {
+            }
+                Console.WriteLine(x);
+            body.AddForce(new Vector2(0f, G * body.Mass));
         }
     }
 }
