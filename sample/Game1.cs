@@ -14,10 +14,15 @@ namespace sample
         private PhysicsComponent _physicsComponent;
 
         private SceneObject _playerObject;
+        private SceneObject _playerObject2;
+        private SceneObject _playerObject3;
         private SceneObject _floorObject;
+        private SceneObject _rightWallObject;
+        private SceneObject _leftWallObject;
 
-        private const float MOVE_SPEED = 200f;
-        private const float JUMP_SPEED = -200f;
+
+        private const float MOVE_SPEED = 400f;
+        private const float JUMP_SPEED = -400f;
 
         public Game1()
         {
@@ -35,15 +40,14 @@ namespace sample
             _physicsComponent = new PhysicsComponent(this);
             Components.Add(_physicsComponent);
 
-            // Floor
             var floorBody = new RigidBody(
-                position: new System.Numerics.Vector2(400, 580), // bottom of screen
+                position: new System.Numerics.Vector2(400, 580),
                 mass: 1000f
             )
             {
-                Width = 800,
+                Width = 900,
                 Height = 40,
-                InverseMass = 0 // immovable
+                InverseMass = 0
             };
 
             _floorObject = new SceneObject
@@ -54,29 +58,102 @@ namespace sample
             };
             _physicsComponent.AddObject(_floorObject);
 
-            // Player
+
+             var rightWallBody = new RigidBody(
+                position: new System.Numerics.Vector2(0, 480),
+                mass: 1000f
+            )
+            {
+                Width = 20,
+                Height = 10000,
+                InverseMass = 0
+            };
+
+            _rightWallObject = new SceneObject
+            {
+                Body = rightWallBody,
+                Shape = ShapeType.Rectangle,
+                Color = Color.DarkGray
+            };
+            _physicsComponent.AddObject(_rightWallObject);
+
+
+            var leftWallBody = new RigidBody(
+                position: new System.Numerics.Vector2(800, 480),
+                mass: 1000f
+            )
+            {
+                Width = 20,
+                Height = 10000,
+                InverseMass = 0
+            };
+
+            _leftWallObject = new SceneObject
+            {
+                Body = leftWallBody,
+                Shape = ShapeType.Rectangle,
+                Color = Color.DarkGray
+            };
+            _physicsComponent.AddObject(_leftWallObject);
+
+
             var playerBody = new RigidBody(
                 position: new System.Numerics.Vector2(400, 500),
                 mass: 10f
             )
             {
-                Width = 40,
-                Height = 40,
+                Width = 20,
+                Height = 20,
                 Restitution = 0.75f
             };
 
+            var playerBody2 = new RigidBody(
+               position: new System.Numerics.Vector2(400, 500),
+               mass: 20f
+           )
+            {
+                Width = 30,
+                Height = 30,
+                Restitution = 0.75f
+            };
+
+            var playerBody3 = new RigidBody(
+            position: new System.Numerics.Vector2(400, 500),
+            mass: 1000f
+        )
+            {
+                Width = 60,
+                Height = 60,
+                Restitution = 0.75f,
+            };
+
+            _playerObject2 = new SceneObject
+            {
+                Body = playerBody2,
+                Shape = ShapeType.Rectangle,
+                Color = Color.Red
+            };
+            _playerObject3 = new SceneObject
+            {
+                Body = playerBody3,
+                Shape = ShapeType.Rectangle,
+                Color = Color.LightBlue
+            };
             _playerObject = new SceneObject
             {
                 Body = playerBody,
-                Shape = ShapeType.Circle,
+                Shape = ShapeType.Rectangle,
                 Color = Color.Red
             };
-            _physicsComponent.AddObject(_playerObject);
 
-            // Tiny blocks
+            _physicsComponent.AddObject(_playerObject);
+            _physicsComponent.AddObject(_playerObject2);
+            _physicsComponent.AddObject(_playerObject3);
+
+
             int numBlocks = 500;
-            float blockWidth = 1f;
-            float blockHeight = 1f;
+            float blockWidth = 5f;
+            float blockHeight = 5f;
             float spacing = 5f;
             float startX = 50f;
             float floorTopY = floorBody.Position.Y - floorBody.Height / 2f;
@@ -96,7 +173,8 @@ namespace sample
                 )
                 {
                     Width = blockWidth,
-                    Height = blockHeight
+                    Height = blockHeight,
+                    Restitution = 0.01f,
                 };
 
                 var blockObject = new SceneObject
@@ -148,7 +226,7 @@ namespace sample
 
             _spriteBatch.Begin();
 
-            _physicsComponent.Draw(_spriteBatch); // Draw all rectangles/circles
+            _physicsComponent.Draw(_spriteBatch);
 
             _spriteBatch.End();
 

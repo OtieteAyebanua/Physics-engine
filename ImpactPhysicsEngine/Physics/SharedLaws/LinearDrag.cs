@@ -16,10 +16,6 @@ namespace PhysicsEngine.Physics.SharedLaws
         public void Apply(IRigidBody body)
         {
             var x = body.Velocity;
-            if (x == body.Velocity)
-            {
-            }
-            Console.WriteLine(x);
             body.AddForce(-Coefficient * body.Velocity);
         }
 

@@ -48,7 +48,7 @@ public class PhysicsComponent : DrawableGameComponent
             MaxBounds = new System.Numerics.Vector2(800, 600)
         };
 
-        _world.AddGlobalForce(new Gravity(9.8f));
+        _world.AddGlobalForce(new Gravity(600f));
         _world.AddGlobalForce(new LinearDrag(1f));
     }
 
